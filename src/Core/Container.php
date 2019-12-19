@@ -1,0 +1,91 @@
+<?php
+
+namespace App\Core;
+
+use PDO;
+use App\Post\PostsRepository;
+use App\Post\PostsController;
+use App\Post\CommentsRepository;
+use App\User\UsersRepository;
+use App\User\LoginController;
+use App\User\LoginService;
+use App\Post\PostsAdminController;
+
+class Container {
+
+  private $recipts = [];
+  private $instances = [];
+
+  public function __construct()
+  {
+    $this->recipts = [
+      'loginService'=> function(){
+        return new LoginService(
+          $this->make("usersRepository")
+        );
+      },
+      'loginController' => function() {
+        return new LoginController(
+          $this->make('loginService')
+        );
+      },
+      'postsController' => function() {
+        return new PostsController(
+          $this->make('postsRepository'),
+          $this->make('commentsRepository')
+        );
+      },
+      'postsAdminController' => function() {
+        return new postsAdminController(
+          $this->make('postsRepository'),
+          $this->make("loginService")
+        );
+      },
+      'postsRepository' => function() {
+        return new PostsRepository(
+          $this->make("pdo")
+        );
+      },
+      'commentsRepository' => function() {
+        return new CommentsRepository(
+          $this->make("pdo")
+        );
+      },
+      'usersRepository' => function() {
+        return new UsersRepository(
+          $this->make("pdo")
+        );
+      },
+      'pdo' => function() {
+        try {
+          $pdo = new PDO(
+            'mysql:host=localhost;dbname=blog;charset=utf8',
+            'blog',
+            'x73DeYJNlNOO8L92'
+          );
+        } catch (\PDOException $e) {
+          echo "Die Verbindung zur Datenbank ist fehlgeschlagen";
+          die();
+        }
+
+        $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+        return $pdo;
+      }
+    ];
+  }
+
+  public function make($name)
+  {
+    if (!empty($this->instances[$name]))
+    {
+      return $this->instances[$name];
+    }
+
+    if (isset($this->recipts[$name])) {
+      $this->instances[$name] = $this->recipts[$name]();
+    }
+
+    return $this->instances[$name];
+  }
+}
+ ?>
