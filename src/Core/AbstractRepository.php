@@ -23,6 +23,15 @@ abstract class AbstractRepository{
     return $posts;
   }
 
+  public function fetchTableDESC(){
+    $table = $this->getTableName();
+    $model = $this->getModelName();
+    $stmt = $this->pdo->query("SELECT * FROM `$table` ORDER BY `$table`.`created_at`  DESC");
+    $posts = $stmt->fetchAll(PDO::FETCH_CLASS, "{$model}");
+    return $posts;
+  }
+
+
   public function find($id){
     $table = $this->getTableName();
     $model = $this->getModelName();
@@ -33,7 +42,6 @@ abstract class AbstractRepository{
     return $post;
 
   }
-
 
 }
 

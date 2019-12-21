@@ -17,7 +17,7 @@
     </div>
   </div>
   <br />
-<h4> Kommentare </h4>
+<h5> Kommentare </h5>
 <ul class="list-group">
   <?php foreach ($comments as $comment):  ?>
     <li class="list-group-item">
@@ -25,7 +25,8 @@
     </li>
   <?php endforeach; ?>
 </ul>
-
+<br /><br />
+  <p> Schreibe einen Komentar</p>
   <form method="post" action="post?id=<?php echo e($post['id']); ?>">
   <textarea name = "content"  class="form-control"></textarea>
   <br />

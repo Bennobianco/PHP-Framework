@@ -12,9 +12,8 @@ class PostsController extends AbstractController {
   }
 
   public function index(){
-
     //$posts = $this->postsRepository->fetchPosts();
-    $posts = $this->postsRepository->fetchTable();
+    $posts = $this->postsRepository->fetchTableDESC();
     $this->render("post/index",[
       'posts' => $posts
     ]);
@@ -26,7 +25,6 @@ class PostsController extends AbstractController {
       $content = $_POST['content'];
       $this->commentsRepository->insertForPost($id, $content);
     }
-
 
     $post = $this->postsRepository->find($id);
     $comments = $this->commentsRepository->allByPost($id);

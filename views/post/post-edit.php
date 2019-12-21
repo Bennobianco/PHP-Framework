@@ -15,9 +15,11 @@
   <form method="POST" action="post-edit?id=<?php echo e($post['id']); ?>">
     <div class"panel panel-default">
       <div class="panel-heading">
+        <h4>title</h4>
         <input type="text" name="title" class="panel-title" value="<?php echo e($post->title); ?>"</input>
       </div>
       <div class="panel-body">
+        <h4>content</h4>
         <textarea name = "content"  class="form-control"><?php echo e($post->content); ?></textarea>
       </div>
     <br />

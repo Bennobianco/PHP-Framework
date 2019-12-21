@@ -23,6 +23,7 @@
     public function insertForPost($postId, $content){
       $table = $this->getTableName();
       $stmt = $this->pdo->prepare("INSERT INTO `$table` (`content`, `post_id`) VALUES (:content, :postId)");
+      var_dump($stmt);
       $stmt->execute([
         'content' => $content,
         'postId' => $postId

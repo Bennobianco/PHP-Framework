@@ -54,6 +54,10 @@ $routes = [
   '/post-edit' => [
     'controller'=> 'postsAdminController',
     'method' => 'edit'
+  ],
+  '/post-new' => [
+    'controller' => 'postsAdminController',
+    'method' => 'new'
   ]
 ];
 
