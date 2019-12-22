@@ -22,7 +22,7 @@
       //$stmt = $this->pdo->prepare("UPDATE `$table` SET `content` = :content WHERE `posts`.`id` = :id");
       $stmt = $this->pdo->prepare("UPDATE `$table` SET `title` = '$title', `content` = '$content' WHERE `posts`.`id` = :id");
       //$stmt = $this->pdo->prepare("UPDATE `$table` SET `content` = '$content' WHERE `posts`.`id` = :id");
-      var_dump($stmt);
+      //var_dump($stmt);
       //die();
       $stmt->execute([
         'id' => $id

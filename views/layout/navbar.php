@@ -1,18 +1,22 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-  <a class="navbar-brand" href="#">MixxedBlog</a>
+<nav class="navbar navbar-expand-sm navbar-light sticky-top">
+   <!-- Brand -->
+  <a class="navbar-brand" >MixxedBlog</a>
+  <!-- Toggler/collapsibe Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
+  <!-- Navbar links -->
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="index">Home<span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-    <form class="form-inline" action="">
-  <input class="form-control" type="search" placeholder="Search">
-  <!--<button class="btn btn-dark" type="submit">Search</button>-->
-   <button class="btn btn-dark type="submit"><i class="fa fa-search"></i></button>
-</form>
-  </div>
+      <li class="nav-item">
+        <a class="p-2 text-muted" href="index">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="p-2 text-muted" href="#">World</a>
+    </li>
+    <li class="nav-item">
+      <a class="p-2 text-muted" href="#">Technology</a>
+    </li>
+  </ul>
+
 </nav>

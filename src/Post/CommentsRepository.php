@@ -20,14 +20,22 @@
       return "App\\Post\\CommentModel";
     }
 
+    /**
+    ** ein Kommentar wird für einen Post erzeugt und dann der postID zugeordnet
+    */
+
     public function insertForPost($postId, $content){
       $table = $this->getTableName();
-      $stmt = $this->pdo->prepare("INSERT INTO `$table` (`content`, `post_id`) VALUES (:content, :postId)");
-      var_dump($stmt);
-      $stmt->execute([
-        'content' => $content,
-        'postId' => $postId
-      ]);
+      //var_dump($_POST['content']);
+      if(!empty($_POST['content'])){
+        $stmt = $this->pdo->prepare("INSERT INTO `$table` (`content`, `post_id`) VALUES (:content, :postId)");
+        $stmt->execute([
+          'content' => $content,
+          'postId' => $postId
+        ]);
+    }
+      //var_dump($stmt)
+
     }
 
     public function allByPost($id){
