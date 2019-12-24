@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm navbar-light sticky-top">
+<nav class="navbar navbar-expand-sm bg-white sticky-top">
    <!-- Brand -->
   <a class="navbar-brand" >MixxedBlog</a>
   <!-- Toggler/collapsibe Button -->
