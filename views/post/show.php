@@ -3,7 +3,7 @@
 
 <br /><br />
 
-<div class="container">
+
   <br />
   <h2>Post.php</h2>
   <p class="lead">Das hier ist die Postseite des Blogs.</p>
@@ -35,5 +35,6 @@
 
 <br /><br />
 
-</div>
+
+
 <?php include "../views/layout/footer.php"?>

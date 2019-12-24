@@ -3,7 +3,7 @@
 //execute this function will scroll smoot to the top of the page
 function scrollToTop() {
   setTimeout(function() {
-    document.documentElement.scrollTop = document.documentElement.scrollTop-100
+    document.documentElement.scrollTop = document.documentElement.scrollTop-32
     if (document.documentElement.scrollTop > 0) {
       scrollToTop()
     }
