@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <script src='/blog/views/js/scroll.js'></script>
 
@@ -51,12 +51,12 @@
     <!-- Custom styles for this template -->
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="http://localhost/blog/views/css/blog.css" rel="stylesheet">
-    <link href="http://localhost/blog/views/css/search.css" rel="stylesheet">
+    <link href="/blog/views/css/blog.css" rel="stylesheet">
+    <link href="/blog/views/css/search.css" rel="stylesheet">
 
   </head>
   <body>
-  <div class="container">
+  <div class="container" id="wrapper">
 <header class="blog-header py-3">
   <div class="row flex-nowrap justify-content-between align-items-center">
     <div class="col-4 pt-1">

@@ -1,4 +1,9 @@
 /* stylelint-disable selector-list-comma-newline-after */
+body {}
+#wrapper {
+	min-height: calc(100vh - 8em - 6px);
+}
+
 
 .blog-header {
   line-height: 1;
@@ -110,7 +115,14 @@ h1, h2, h3, h4, h5, h6 {
  * Footer
  */
 .blog-footer {
-  padding: 2.5rem 0;
+  position:relative;
+	display:table-cell;
+	vertical-align:middle;
+	width:100vw;
+  height:7em;
+  position: static;
+  bottom: 0px;
+	padding: 2.5rem 0;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
