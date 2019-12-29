@@ -18,12 +18,8 @@
     public function editPosts($id, $content, $title){
 
       $table = $this->getTableName();
-      //$model = $this->getModelName();
-      //$stmt = $this->pdo->prepare("UPDATE `$table` SET `content` = :content WHERE `posts`.`id` = :id");
-      $stmt = $this->pdo->prepare("UPDATE `$table` SET `title` = '$title', `content` = '$content' WHERE `posts`.`id` = :id");
-      //$stmt = $this->pdo->prepare("UPDATE `$table` SET `content` = '$content' WHERE `posts`.`id` = :id");
-      //var_dump($stmt);
-      //die();
+      $stmt = $this->pdo->prepare("UPDATE `$table` SET `title` = '$title',
+        `content` = '$content' WHERE `posts`.`id` = :id");
       $stmt->execute([
         'id' => $id
       ]);
@@ -42,17 +38,6 @@
 
   public function newPost($title, $content){
     $table = $this->getTableName();
-    /*$stmt = $this->pdo->prepare(
-      "INSERT INTO `posts` (`title`, `content`, `created_at`)
-      VALUES (:title, :content, current_timestamp())"
-    );*/
-    //$created_at = current_timestamp();
-    /*$stmt = $this->pdo->prepare(
-      "INSERT INTO `posts` (`id`, `title`, `content`, `created_at`) VALUES (NULL, 'dfgdg', 'gdfgdgdfgdgdfgdfgdfgfdgfdgg', current_timestamp());"
-    );*/
-    //$title = "endlich";
-    //$content = "lskjlakdjakjflkjfl";
-
     $stmt = $this->pdo->prepare("INSERT INTO `posts` (`content`, `title`) VALUES (:content, :title)");
     var_dump($stmt);
     $stmt->execute([
@@ -61,14 +46,48 @@
     ]);
 
     var_dump($stmt);
-    //die();
-    /*$stmt->execute([
-      'content' => 'sdfdf',
-      'title' => 'afddfdf',
-      'id' => 12,
-      'created_at' => $created_at
-    ]);*/
+
   }
+
+  public function searchPost($search){
+    $table = $this->getTableName();
+    $search_exploded = explode ( " ", $search );
+    $construct = "";
+        /*falls mehr als ein suchwort eingegeben wird*/
+        $x = 0;
+        foreach( $search_exploded as $search_each ) {
+          $x++;
+          if( $x == 1 ){
+            $construct .= "(`title` LIKE '%$search_each%'";
+            $construct .= " OR `content` LIKE '%$search_each%')";
+          }
+          else{
+            $construct .= " AND (`title` LIKE '%$search_each%'";
+            $construct .= " OR `content` LIKE '%$search_each%')";
+            }
+        }
+            $construct = "SELECT * FROM `posts` WHERE  $construct";
+            $stmt = $this->pdo->prepare ( $construct );
+              var_dump($stmt);
+              $stmt->execute([
+              ]);
+              $foundnum = $stmt->rowCount();
+              if ($foundnum == 0)
+                     echo "Sorry, there are no matching result for <b> $search </b>. </br> </br> 1. Try more general words. for example: If you want to search 'how to create a website' then use general keyword like 'create' 'website' </br> 2. Try different words with similar  meaning </br> 3. Please check your spelling";
+              else {
+                echo "$foundnum results found !<p>";
+
+                while( $post = $stmt->fetch()) {
+                    $title = $post ['title'];
+                    $content = $post ['content'];
+                    $id = $post ['id'];
+                    echo "<a href='post?id=$id'> <b> $title </b> </a> ";
+                    return $post;
+                     // echo "<a href=''> <b> $content </b> </a> ";
+                     }
+              }
+            }
+
 }
 
  ?>

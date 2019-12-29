@@ -26,6 +26,22 @@ class PostsController extends AbstractController {
     ]);
   }
 
+  public function search(){
+    $button = $_GET['submit'];
+    $search = $_GET['search'];
+    if( !$button ){
+      echo "you didn't submit a keyword";
+    }else {
+      $post = $this->postsRepository->searchPost($search);
+    }
+          $this->render("post/search",[
+            'post' => $post
+        ]);
+
+    }
+
+
+
   public function show(){
     $id = ($_GET['id']);
     if (isset($_POST['content'])){
@@ -41,7 +57,6 @@ class PostsController extends AbstractController {
       'comments' =>$comments
     ]);
   }
-
 }
 
  ?>

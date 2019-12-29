@@ -47,10 +47,13 @@ $routes = [
     'controller' => 'postsController',
     'method' => 'archive'
   ],
-
   '/post' => [
     'controller'=> 'postsController',
     'method' => 'show'
+  ],
+  '/search' => [
+    'controller'=> 'postsController',
+    'method' => 'search'
   ],
   '/post-admin' => [
     'controller'=> 'postsAdminController',

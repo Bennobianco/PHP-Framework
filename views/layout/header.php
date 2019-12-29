@@ -79,9 +79,9 @@
   <div id="myOverlay" class="overlay">
     <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
     <div class="overlay-content">
-      <form action="/action_page.php">
+      <form action="/blog/public/index.php/search">
         <input type="text" placeholder="Search.." name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
+        <button type="submit" name ="submit" value = 'Search source code'><i class="fa fa-search"></i></button>
       </form>
     </div>
   </div>
