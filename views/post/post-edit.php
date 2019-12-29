@@ -37,4 +37,5 @@
 <br /><br />
 
 </div>
-<?php include "../views/layout/footer.php"?>
+</body>
+</html>

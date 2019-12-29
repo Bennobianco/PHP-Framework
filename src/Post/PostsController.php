@@ -19,6 +19,13 @@ class PostsController extends AbstractController {
     ]);
   }
 
+  public function archive(){
+    $posts = $this->postsRepository->fetchTableDESC();
+    $this->render("post/archive",[
+      'posts' => $posts
+    ]);
+  }
+
   public function show(){
     $id = ($_GET['id']);
     if (isset($_POST['content'])){

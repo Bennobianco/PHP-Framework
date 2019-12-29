@@ -23,5 +23,5 @@
 <a href="post-admin">Back to Postst</a>
 
 </div>
-
-<?php include "../views/layout/footer.php"?>
+</body>
+</html>

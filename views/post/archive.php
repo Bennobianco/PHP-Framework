@@ -12,5 +12,6 @@
     </li>
   <?php endforeach; ?>
 </ul>
+</div><!-- /.blog-id.wrapper from header -->
 
 <?php include __DIR__ . "/../layout/footer.php"; ?>

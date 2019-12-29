@@ -98,7 +98,7 @@
        <div class="p-4">
          <h4 class="font-italic">Archives</h4>
          <ol class="list-unstyled mb-0">
-           <li><a href="#">alle Blogs</a></li>
+           <li><a href="/blog/public/index.php/archive">alle Blogs</a></li>
          </ol>
        </div>
 

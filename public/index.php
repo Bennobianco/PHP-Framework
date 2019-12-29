@@ -43,6 +43,11 @@ $routes = [
     'controller' => 'postsController',
     'method' => 'index'
   ],
+  '/archive' => [
+    'controller' => 'postsController',
+    'method' => 'archive'
+  ],
+
   '/post' => [
     'controller'=> 'postsController',
     'method' => 'show'

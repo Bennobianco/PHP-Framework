@@ -19,4 +19,5 @@
   <a href="post-new">Neuer Post</a>
 
 </div>
-<?php include "../views/layout/footer.php"?>
+</body>
+</html>

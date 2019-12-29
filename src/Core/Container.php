@@ -57,12 +57,18 @@ class Container {
         );
       },
       'pdo' => function() {
+        $dbserver = 'localhost';
+        $dbname = 'blog';
+        $dblogin = 'blog';
+        $dbpass = 'x73DeYJNlNOO8L92';
         try {
-          $pdo = new PDO(
+          $pdo = new PDO('mysql:host=' . $dbserver . ';dbname=' . $dbname . ';
+          charset=utf8', $dblogin, $dbpass);
+          /*$pdo = new PDO(
             'mysql:host=localhost;dbname=blog;charset=utf8',
             'blog',
             'x73DeYJNlNOO8L92'
-          );
+          );*/
         } catch (\PDOException $e) {
           echo "Die Verbindung zur Datenbank ist fehlgeschlagen";
           die();

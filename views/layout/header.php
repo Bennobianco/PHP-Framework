@@ -72,7 +72,7 @@
         stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"
         focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
       </a>
-      <a class="btn btn-sm btn-outline-secondary" href="http://localhost/blog/public/index.php/post-admin">Sign in</a>
+      <a class="btn btn-sm btn-outline-secondary" href="/blog/public/index.php/post-admin">Sign in</a>
     </div>
   </div>
 
