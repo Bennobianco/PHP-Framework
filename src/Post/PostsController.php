@@ -32,10 +32,10 @@ class PostsController extends AbstractController {
     if( !$button ){
       echo "you didn't submit a keyword";
     }else {
-      $post = $this->postsRepository->searchPost($search);
+      $posts = $this->postsRepository->searchPost($search);
     }
           $this->render("post/search",[
-            'post' => $post
+            'posts' => $posts
         ]);
 
     }

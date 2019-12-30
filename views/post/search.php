@@ -1,6 +1,17 @@
-<br /><br />
-<?php
-var_dump($post['title']);
+<?php include __DIR__ . "/../layout/header.php"; ?>
 
+<br />
+<br />
 
- ?>
+<ul>
+  <?php foreach ($posts AS $post): ?>
+    <li>
+      <a href="post?id=<?php echo e($post->id); ?>">
+        <?php echo e($post->title); ?>
+      </a>
+    </li>
+  <?php endforeach; ?>
+</ul>
+</div><!-- /.blog-id.wrapper from header -->
+
+<?php include __DIR__ . "/../layout/footer.php"; ?>>

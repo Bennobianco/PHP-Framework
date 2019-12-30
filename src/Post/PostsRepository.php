@@ -51,6 +51,7 @@
 
   public function searchPost($search){
     $table = $this->getTableName();
+    $model = $this->getModelName();
     $search_exploded = explode ( " ", $search );
     $construct = "";
         /*falls mehr als ein suchwort eingegeben wird*/
@@ -77,14 +78,17 @@
               else {
                 echo "$foundnum results found !<p>";
 
-                while( $post = $stmt->fetch()) {
-                    $title = $post ['title'];
+                //$posts = $stmt->fetch()) {
+
+                $posts = $stmt->fetchAll(PDO::FETCH_CLASS, "{$model}");
+                    /*$title = $post ['title'];
                     $content = $post ['content'];
                     $id = $post ['id'];
-                    echo "<a href='post?id=$id'> <b> $title </b> </a> ";
-                    return $post;
+                    echo "<a href='post?id=$id'>
+                    <b> $title </b> </a> ";*/
+                    return $posts;
                      // echo "<a href=''> <b> $content </b> </a> ";
-                     }
+
               }
             }
 

@@ -3,15 +3,11 @@
 
 <br /><br />
 
-
-  <br />
-  <h2>Post.php</h2>
-  <p class="lead">Das hier ist die Postseite des Blogs.</p>
-
   <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title"><?php echo e($post->title); ?></h3>
     </div>
+    <br />
     <div class="panel-body">
       <?php echo nl2br(e($post->content)); ?>
     </div>
