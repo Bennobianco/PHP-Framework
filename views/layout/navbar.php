@@ -12,11 +12,11 @@
         <a class="p-2 text-muted" href="index">Home</a>
     </li>
     <li class="nav-item">
-      <a class="p-2 text-muted" href="#">World</a>
+      <a class="p-2 text-muted" href="/blog/views/otherPages/comingSoon.php">BlenderWorld</a>
     </li>
-    <li class="nav-item">
+    <!--<li class="nav-item">
       <a class="p-2 text-muted" href="#">Technology</a>
-    </li>
+    </li>-->
   </ul>
 
 </nav>

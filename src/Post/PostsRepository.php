@@ -49,7 +49,7 @@
 
   }
 
-  public function searchPost($search){
+  public function searchPosts($search){
     $table = $this->getTableName();
     $model = $this->getModelName();
     $search_exploded = explode ( " ", $search );
@@ -69,7 +69,7 @@
         }
             $construct = "SELECT * FROM `posts` WHERE  $construct";
             $stmt = $this->pdo->prepare ( $construct );
-              var_dump($stmt);
+              //var_dump($stmt);
               $stmt->execute([
               ]);
               $foundnum = $stmt->rowCount();

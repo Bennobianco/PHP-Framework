@@ -29,16 +29,22 @@ class PostsController extends AbstractController {
   public function search(){
     $button = $_GET['submit'];
     $search = $_GET['search'];
+
     if( !$button ){
       echo "you didn't submit a keyword";
     }else {
-      $posts = $this->postsRepository->searchPost($search);
+      if (strlen($search) <= 1) {
+        echo "search term too short";
+      }else {
+        //echo "You searched for <b> $search </b>";
+        $posts = $this->postsRepository->searchPosts($search);
+        $this->render("post/search",[
+          'posts' => $posts,
+          'search'=> $search
+      ]);
+      }
     }
-          $this->render("post/search",[
-            'posts' => $posts
-        ]);
-
-    }
+  }
 
 
 
