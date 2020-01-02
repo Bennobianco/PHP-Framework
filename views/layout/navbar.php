@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand-sm bg-white sticky-top">
-   <!-- Brand -->
+-<nav class="navbar navbar-expand-sm bg-white navbar-light sticky-top">
+
   <a class="navbar-brand" >MixxedBlog</a>
-  <!-- Toggler/collapsibe Button -->
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <!-- Navbar links -->
+
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
@@ -14,10 +14,7 @@
     <li class="nav-item">
       <a class="p-2 text-muted" href="/blog/views/otherPages/comingSoon.php">BlenderWorld</a>
     </li>
-    <!--<li class="nav-item">
-      <a class="p-2 text-muted" href="#">Technology</a>
-    </li>-->
+
   </ul>
 
 </nav>
-<body>

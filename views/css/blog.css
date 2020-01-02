@@ -1,8 +1,8 @@
 /* stylelint-disable selector-list-comma-newline-after */
-body {}
 #wrapper {
-	min-height: calc(100vh - 8em - 6px);
+  min-height: calc(100vh - 8em - 6px);
 }
+
 
 
 .blog-header {
