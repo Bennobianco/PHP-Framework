@@ -56,6 +56,7 @@ class Container {
           $this->make("pdo")
         );
       },
+      /*with PDO you have a common interface for different databases*/
       'pdo' => function() {
         $dbserver = 'localhost';
         $dbname = 'blog';
@@ -64,14 +65,10 @@ class Container {
         try {
           $pdo = new PDO('mysql:host=' . $dbserver . ';dbname=' . $dbname . ';
           charset=utf8', $dblogin, $dbpass);
-          /*$pdo = new PDO(
-            'mysql:host=localhost;dbname=blog;charset=utf8',
-            'blog',
-            'x73DeYJNlNOO8L92'
-          );*/
-        } catch (\PDOException $e) {
-          echo "Die Verbindung zur Datenbank ist fehlgeschlagen";
-          die();
+        } catch (PDOException $e) {
+          # Konkrete Fehlermeldung $ex->getMessage() nur auf Testserver ausgeben, nicht "in Produktion":
+          die('Die Datenbank ist momentan nicht erreichbar. ' .
+          ($_SERVER['SERVER_NAME'] == 'localhost' ? htmlspecialchars($ex->getMessage()) : ''));
         }
 
         $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);

@@ -1,4 +1,4 @@
--<nav class="navbar navbar-expand-sm bg-white navbar-light sticky-top">
+<nav class="navbar navbar-expand-sm bg-white navbar-light sticky-top">
 
   <a class="navbar-brand" >MixxedBlog</a>
 

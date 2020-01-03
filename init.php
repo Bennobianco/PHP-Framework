@@ -3,6 +3,7 @@
 require __DIR__ ."/autoload.php";
 //require __DIR__ ."/database.php";
 
+//
 function e($str){
   return htmlentities($str, ENT_QUOTES, 'UTF-8');
 }
@@ -16,6 +17,8 @@ function readMore($content, $limit, $id) {
   return $content;
 }
 
+/* a function that displays only a part of the content.
+  can be passed via the parameter limit*/
 function shortContent($content, $limit) {
   $content = substr($content,0,$limit);
   $content = substr($content,0,strrpos($content,' '));
