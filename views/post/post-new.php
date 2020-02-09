@@ -13,7 +13,7 @@
   <p>Der Post wurde erfolgreich gespeichert</p>
   <?php endif; ?>
   <form method="POST" action="post-new">
-  <input type="text" name="title" class="panel-title"</input>
+  <input type="text" name="title" class="panel-title"></input>
   <textarea name = "content"  class="form-control"></textarea>
   <br />
   <input type="submit" value="Neuer Post" class="btn btn-primary"/>

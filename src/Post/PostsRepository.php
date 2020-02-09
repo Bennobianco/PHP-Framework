@@ -44,9 +44,7 @@
       'content' => $content,
       'title' => $title
     ]);
-
-    var_dump($stmt);
-
+    //var_dump($stmt);
   }
 
   public function searchPosts($search){
@@ -74,7 +72,7 @@
               ]);
               $foundnum = $stmt->rowCount();
               if ($foundnum == 0)
-                     echo "Sorry, there are no matching result for <b> $search </b>. </br> </br> 1. Try more general words. for example: If you want to search 'how to create a website' then use general keyword like 'create' 'website' </br> 2. Try different words with similar  meaning </br> 3. Please check your spelling";
+                echo "Sorry, there are no matching result for <b> $search </b>. </br> </br> 1. Try more general words. for example: If you want to search 'how to create a website' then use general keyword like 'create' 'website' </br> 2. Try different words with similar  meaning </br> 3. Please check your spelling";
               else {
                 echo "$foundnum results found !<p>";
 

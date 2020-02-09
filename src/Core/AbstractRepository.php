@@ -1,4 +1,7 @@
 <?php
+/*
+** class that deals with the connecting to the database
+*/
 
 namespace App\Core;
 use PDO;
@@ -15,10 +18,14 @@ abstract class AbstractRepository{
 
   abstract public function getModelName();
 
+  /*returns an array containing all of the remaining rows in the result set*/
   public function fetchTable(){
     $table = $this->getTableName();
     $model = $this->getModelName();
     $stmt = $this->pdo->query("SELECT * FROM `$table`");
+    
+  /*Gibt Instanzen der angegebenen Klasse zurück, wobei die Spalten
+  jeder Zeile den benannten Eigenschaften in der Klasse zugeordnet werden. */
     $posts = $stmt->fetchAll(PDO::FETCH_CLASS, "{$model}");
     return $posts;
   }

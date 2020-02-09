@@ -7,19 +7,19 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>MixxedBlog · HirnRa</title>
+    <link rel="icon" href="favicon.ico" sizes="16x16" type="./../img/LogoBlog1.svg">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
- 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+ 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
- 	 <link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 
   	<link href="https://fonts.googleapis.com/css?family=Dosis&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Atma|Paprika&display=swap" rel="stylesheet">
   	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
   	<!-- JS for page up button -->
@@ -61,7 +61,7 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
+
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="/blog/views/css/blog.css" rel="stylesheet">
