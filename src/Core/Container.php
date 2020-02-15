@@ -10,6 +10,7 @@ use App\User\UsersRepository;
 use App\User\LoginController;
 use App\User\LoginService;
 use App\Post\PostsAdminController;
+use App\Post\ProverbsRepository;
 
 class Container {
 
@@ -32,13 +33,19 @@ class Container {
       'postsController' => function() {
         return new PostsController(
           $this->make('postsRepository'),
-          $this->make('commentsRepository')
+          $this->make('commentsRepository'),
+          $this->make('proverbsRepository')
         );
       },
       'postsAdminController' => function() {
         return new postsAdminController(
           $this->make('postsRepository'),
           $this->make("loginService")
+        );
+      },
+      'proverbsRepository' => function(){
+        return new ProverbsRepository(
+          $this->make("pdo")
         );
       },
       'postsRepository' => function() {
@@ -56,6 +63,7 @@ class Container {
           $this->make("pdo")
         );
       },
+
       /*with PDO you have a common interface for different databases*/
       'pdo' => function() {
         $dbserver = 'localhost';

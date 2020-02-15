@@ -39,7 +39,7 @@
   public function newPost($title, $content){
     $table = $this->getTableName();
     $stmt = $this->pdo->prepare("INSERT INTO `posts` (`content`, `title`) VALUES (:content, :title)");
-    var_dump($stmt);
+    //var_dump($stmt);
     $stmt->execute([
       'content' => $content,
       'title' => $title

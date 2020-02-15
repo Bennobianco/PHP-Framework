@@ -7,7 +7,7 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>MixxedBlog · HirnRa</title>
-    <link rel="icon" href="favicon.ico" sizes="16x16" type="./../img/LogoBlog1.svg">
+    <link rel="shortcut icon" href="http://localhost/blog/views/img/favicon.ico">
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/blog/">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -23,7 +23,7 @@
   	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
   	<!-- JS for page up button -->
-  	<script src='/blog/views/js/scroll.js'></script>
+  	<script src='./../../views/js/scroll.js'></script>
 
 
     <!-- Bootstrap core CSS -->
@@ -31,10 +31,9 @@
 
     <!-- Favicons -->
 <link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
 <link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
-<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<!--<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">-->
 <meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
 <meta name="theme-color" content="#563d7c">
 
@@ -64,8 +63,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="/blog/views/css/blog.css" rel="stylesheet">
-    <link href="/blog/views/css/search.css" rel="stylesheet">
+    <link href="./../../views/css/blog.css" rel="stylesheet">
+    <link href="./../../views/css/search.css" rel="stylesheet">
 
   </head>
   <body>
@@ -85,7 +84,7 @@
         stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"
         focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
       </a>
-      <a class="btn btn-sm btn-outline-secondary" href="/public/index.php/post-admin">Sign in</a>
+      <a class="btn btn-sm btn-outline-secondary" href="post-admin">Sign in</a>
     </div>
   </div>
 

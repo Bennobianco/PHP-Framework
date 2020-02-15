@@ -6,16 +6,20 @@ use App\Core\AbstractController;
 class PostsController extends AbstractController {
   public function __construct(
     PostsRepository $postsRepository,
-    CommentsRepository $commentsRepository){
+    CommentsRepository $commentsRepository,
+    ProverbsRepository $proverbsRepository){
     $this->postsRepository = $postsRepository;
     $this->commentsRepository =$commentsRepository;
+    $this->proverbsRepository = $proverbsRepository;
   }
 
   public function index(){
     //$posts = $this->postsRepository->fetchPosts();
     $posts = $this->postsRepository->fetchTableDESC();
+    $proverbs = $this->proverbsRepository->fetchTable();
     $this->render("post/index",[
-      'posts' => $posts
+      'posts' => $posts,
+      'proverbs' => $proverbs
     ]);
   }
 

@@ -2,15 +2,15 @@
 
 <?php
   $numOfPosts = 3;
-  $count = 0;
+  $blogCount = 0;
   $limit = 150;
 
   foreach ($posts as $post):
-    if ($count == $numOfPosts){
+    if ($blogCount == $numOfPosts){
       break;
     }
 ?>
-<?php if($count == 0) :?>
+<?php if($blogCount == 0) :?>
 
   <div class="jumbotron bg-img p-4 p-md-5 text-white rounded " style="margin-bottom: 0px;">
   <div class="col-md-6 px-0">
@@ -26,11 +26,11 @@
         <a href="https://pixabay.com/de/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1348079">Pixabay</a>
     </footer>
   </blockquote>
-  <?php  $count++;?>
+  <?php  $blogCount++;?>
 <div class="row mb-2">
 <?php else: ?>
 
-<?php $count++;?>
+<?php $blogCount++;?>
 
   <div class="col-md-6">
     <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
@@ -66,18 +66,15 @@
          <h2 class="blog-post-title">Zitate</h2>
          <p class="blog-post-meta">Dezember 22, 2019 by <a href="#">Bennobianco</a></p>
 
-         <blockquote class="blockquote">
-           <p>"Philipp ist cool"</p>
-            <footer class="blockquote-footer">SuperMum</footer>
-            <hr>
-           <p>"Zwei Dinge sind unendlich, das Universum und die menschliche Dummheit.
-           Aber beim Universum bin ich mir noch nicht ganz sicher."</p>
-            <footer class="blockquote-footer">Alber Einstein</footer>
-           <hr>
-           <p>"Ich fühle eindeutig <strong>aggressive</strong> Tendenzen!"</p>
-            <footer class="blockquote-footer">Worf</footer>
-         </blockquote>
+         <?php foreach ($proverbs as $proverb): {
+           // code...
+         } ?>
 
+         <blockquote class="blockquote">
+           <p><?php echo ($proverb->content); ?></p>
+           <footer class="blockquote-footer"><?php echo ($proverb->author); ?></footer>
+           <hr>
+       <?php endforeach ?>
        </div><!-- /.blog-post -->
 
 
